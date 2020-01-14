@@ -1,5 +1,5 @@
 const initialFunction = () => {};
 
 export {
-  initialFunction
+  initialFunction,
 };

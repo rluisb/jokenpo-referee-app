@@ -10,5 +10,13 @@
   "rules": {
     "no-console": "off",
     "no-undef": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js", "*.spec.js"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 }

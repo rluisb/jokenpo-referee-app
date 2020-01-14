@@ -1,0 +1,5 @@
+const checkWinner = () => {};
+
+export {
+  checkWinner,
+};
