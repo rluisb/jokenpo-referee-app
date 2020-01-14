@@ -14,6 +14,15 @@
     "test:coverage": "nyc npm test",
     "dev": "node src/main.js"
   },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rluisb/jokenpo-referee-app.git"
