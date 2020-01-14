@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import { checkWinner } from '../../src/game/referee';
-import { STONE, SCISOR, PAPER } from '../../src/game/game-items';
+import { checkWinner } from '../../../src/game/referee';
+import { STONE, SCISOR, PAPER } from '../../../src/game/game-items';
 
-describe('Rules', () => {
+describe('Referee', () => {
   context('Smoke Test', () => {
     it('Should exist the `checkWinner` function', () => {
       expect(checkWinner).to.exist;

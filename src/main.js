@@ -1,5 +1,0 @@
-const initialFunction = () => {};
-
-export {
-  initialFunction,
-};
