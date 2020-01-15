@@ -12,7 +12,7 @@
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js  --require babel-register --watch",
     "test:coverage": "nyc npm test",
-    "dev": "node src/main.js"
+    "dev": "npm run build && node lib/main.js"
   },
   "nyc": {
     "reporter": [
