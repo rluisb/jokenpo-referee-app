@@ -1,8 +1,8 @@
 import GAME_RULES from './rules';
 
-const announceWinner = ({ winner, looser }) => `${winner.name}: ${winner.name} wins over ${looser.name}: ${looser.choice}`;
+const announceWinner = ({ winner, looser }) => `${winner.name}'s ${winner.choice} wins over ${looser.name}'s ${looser.choice}`;
 
-const announceDraw = ({ playerOne, playerTwo }) => `${playerOne.name}: ${playerOne.name} draw with ${playerTwo.name}: ${playerTwo.choice}`;
+const announceDraw = ({ playerOne, playerTwo }) => `${playerOne.name}'s ${playerOne.choice} draw with ${playerTwo.name}'s ${playerTwo.choice}`;
 
 const checkWinner = ({ playerOne, playerTwo }) => {
   if (playerOne.choice === GAME_RULES[playerTwo.choice].loose) {

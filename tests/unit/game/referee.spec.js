@@ -29,7 +29,7 @@ describe('Referee', () => {
       it('Should return `Player 1` as the winner choosing `STONE`', () => {
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerOne.name}: ${playerOne.name} wins over ${playerTwo.name}: ${playerTwo.choice}`);
+        expect(result).to.be.equal(`${playerOne.name}'s ${playerOne.choice} wins over ${playerTwo.name}'s ${playerTwo.choice}`);
       });
 
       it('Should return `Player 1` as the winner choosing `PAPER`', () => {
@@ -37,7 +37,7 @@ describe('Referee', () => {
         playerTwo.choice = STONE;
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerOne.name}: ${playerOne.name} wins over ${playerTwo.name}: ${playerTwo.choice}`);
+        expect(result).to.be.equal(`${playerOne.name}'s ${playerOne.choice} wins over ${playerTwo.name}'s ${playerTwo.choice}`);
       });
 
       it('Should return `Player 1` as the winner choosing `SCISOR`', () => {
@@ -45,7 +45,7 @@ describe('Referee', () => {
         playerTwo.choice = PAPER;
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerOne.name}: ${playerOne.name} wins over ${playerTwo.name}: ${playerTwo.choice}`);
+        expect(result).to.be.equal(`${playerOne.name}'s ${playerOne.choice} wins over ${playerTwo.name}'s ${playerTwo.choice}`);
       });
     });
     context('When `Player 2` is the winner', () => {
@@ -67,7 +67,7 @@ describe('Referee', () => {
       it('Should return `Player 2` as the winner choosing `STONE`', () => {
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerTwo.name}: ${playerTwo.name} wins over ${playerOne.name}: ${playerOne.choice}`);
+        expect(result).to.be.equal(`${playerTwo.name}'s ${playerTwo.choice} wins over ${playerOne.name}'s ${playerOne.choice}`);
       });
 
       it('Should return `Player 2` as the winner choosing `PAPER`', () => {
@@ -75,7 +75,7 @@ describe('Referee', () => {
         playerTwo.choice = PAPER;
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerTwo.name}: ${playerTwo.name} wins over ${playerOne.name}: ${playerOne.choice}`);
+        expect(result).to.be.equal(`${playerTwo.name}'s ${playerTwo.choice} wins over ${playerOne.name}'s ${playerOne.choice}`);
       });
 
       it('Should return `Player 2` as the winner choosing `SCISOR`', () => {
@@ -83,7 +83,7 @@ describe('Referee', () => {
         playerTwo.choice = SCISOR;
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerTwo.name}: ${playerTwo.name} wins over ${playerOne.name}: ${playerOne.choice}`);
+        expect(result).to.be.equal(`${playerTwo.name}'s ${playerTwo.choice} wins over ${playerOne.name}'s ${playerOne.choice}`);
       });
     });
     context('When `Player 1` and `Player 2` draw the game', () => {
@@ -105,7 +105,7 @@ describe('Referee', () => {
       it('Should return `DRAW` as result', () => {
         const result = checkWinner({ playerOne, playerTwo });
         expect(result).to.not.be.equal(null);
-        expect(result).to.be.equal(`${playerOne.name}: ${playerOne.name} draw with ${playerTwo.name}: ${playerTwo.choice}`);
+        expect(result).to.be.equal(`${playerOne.name}'s ${playerOne.choice} draw with ${playerTwo.name}'s ${playerTwo.choice}`);
       });
     });
   });
